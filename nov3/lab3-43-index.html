@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字展销平台</title>
+    <link rel="stylesheet" href="font_3/iconfont.css">
+    <style>
+        header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e7e7e7;
+        }
+        .name1 {
+            width: 100px;
+            height: 20px;
+            background-image: url('logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 0 auto 10px auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        nav ul {
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+            text-decoration: none;
+            color: orangered;
+        }
+        .left{
+            position: relative;
+            top: 30px;
+            background-color: #f8f8f8;
+            border: 2px solid #e7e7e7;
+            width: 150px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 120px;
+            cursor: pointer;
+        }
+        .center{
+            background-color: #f8f8f8;
+            width: 80%;
+            height: 500px;
+            position:absolute;
+            top: 150px; left: 170px;
+        }
+        .right{
+            position: fixed;
+            top: 150px; right: 10px;
+            background-color: #f8f8f8;
+            border: 2px solid #e7e7e7;
+            width: 150px;
+            text-align: left;
+            font-size: 30px;
+            cursor: pointer;
+            float: right;
+            color: #ff0404;
+        }
+        .bottom{
+            position: absolute;
+            top: 675px; left: 170px; right: 170px;
+        }
+        span{
+            font-size: 35px;
+            color: orangered;
+        }
+        table{
+            width: 100%;
+            border: #e7e7e7 solid 2px;
+            border-collapse: collapse;
+            text-align: center;
+        }‘
+        th, td{
+            border: #e7e7e7 solid 2px;
+        }
+        .image1{
+            width: 220px;
+            height: 300px;
+            position: absolute;
+            top: 50px; left: 50px;
+            margin: 10px;
+            border: 2px solid #e7e7e7;
+            text-align: center;
+            cursor: pointer;
+        }
+        .image2{
+            width: 220px;
+            height: 300px;
+            position: absolute;
+            top: 50px; left: 400px;
+            border: 2px solid #e7e7e7;
+            text-align: center;
+             cursor: pointer;
+        }
+        .image3{
+            width: 220px;
+            height: 300px;
+            position: absolute;
+            top: 50px; left: 750px;
+            border: 2px solid #e7e7e7;
+            text-align: center;
+             cursor: pointer;
+        }
+        .image4{
+            width: 220px;
+            height: 300px;
+            position: absolute;
+            top: 50px; left: 1100px;
+            border: 2px solid #e7e7e7;
+             text-align: center;
+             cursor: pointer;
+        }
+        strong {
+            position: absolute;
+            top: 390px; left: 170px; right: 170px;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+        }
+        .img1{
+            float: right
+        }
+        .iconfont.icon-rementuijian{
+            font-size: 30px;
+            color: orangered;
+        }
+        .iconfont.icon-cuxiaoxinxi{
+            font-size: 50px;
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="name1"></div>
+        <h1>数字展销平台</h1>
+            <nav><ul type="none">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">图书分类</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul></nav>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <!-- Main content goes here -->
+            <nav>
+                <ul>
+                    <li><a>科幻</a></li>
+                </ul>
+                <ul>
+                    <li><a>散文</a></li>
+                </ul>
+                <ul>
+                    <li><a>历史</a></li>
+                </ul>
+                <ul>
+                    <li><a>教育</a></li>
+                </ul>
+                <ul>
+                    <li><a>名著</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center">
+            <span class="iconfont icon-rementuijian"></span>
+            <span>热门推荐</span>
+            <div class="image1">
+               <nav><a><img src="image3/threebody.jpg" alt="" width="200" height="250">￥19.99 三体</a></nav>
+            </div>
+            <div class="image2">
+                <nav><a><img src="image3/Call To Arms.jpg" alt="" width="200" height="250 "></a>￥29.99 呐喊</nav>
+            </div>
+            <div class="image3">
+               <nav><a><img src="image3/history.jpg" alt="" width="200" height="250 "></a>￥39.99 史记</nav>
+            </div>
+            <div class="image4">
+               <nav><a><img src="image3/zhaohuaxishi.jpg" alt="" width="200" height="250 "></a>￥49.99 朝花夕拾</nav>
+            </div>
+            <strong>
+                推荐四部经典：《三体》是中国科幻里程碑，以 “黑暗森林法则” 展开宇宙博弈，于硬核科幻中探讨文明存续与人性；《呐喊》收《孔乙己》等名篇，鲁迅以冷峻笔触揭旧中国底层苦难与社会弊病，满含家国情怀。​
+《史记》为首部纪传体通史，记黄帝至汉武历史，塑鲜活人物，兼具 “史家之绝唱” 与文学魅力；《朝花夕拾》是鲁迅温情散文集，忆百草园趣事与藤野先生教诲，显人性之美。
+            </strong>
+        </div>
+        <div class="bottom">
+            <table>
+                <tr>
+                    <th>封面</th>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>价格</th>
+                    <th>出版日期</th>
+                </tr>
+                <tr>
+                    <td><img src="image3/red builting.jpg" alt="" width="100" height="100"></td>
+                    <td>红楼梦</td>
+                    <td>曹雪芹</td>
+                    <td>￥29</td>
+                    <td>1999.2.29</td>
+                </tr>
+                <tr>
+                    <td><img src="image3/the sea bottem.jpg" alt="" width="100" height="100"></td>
+                    <td>海底两万里</td>
+                    <td>儒勒·凡尔纳</td>
+                    <td>￥39</td>
+                    <td>2000.3.26</td>
+                </tr>
+                <tr>
+                    <td><img src="image3/Ming D.jpg" alt="" width="100" height="100"></td>
+                    <td>明朝那些事儿</td>
+                    <td>当年明月</td>
+                    <td>￥49</td>
+                    <td>2005.5.1</td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <span class="iconfont icon-cuxiaoxinxi"></span>
+            <p>促销信息</p>
+            <ul type="none">
+                <li>满100减20</li>
+                <li>满200减50</li>
+                <li>新用户立减10</li>
+                <span class="img1"><img src="image3/8738101dc812be263b476e7561566f0c.gif" alt="" width="130" height="130"></span>
+        </div>
+    </main>
+</body>
+</html>
