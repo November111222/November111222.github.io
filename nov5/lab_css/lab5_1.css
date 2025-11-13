@@ -1,0 +1,132 @@
+.box-main{
+    width: 600px;
+    height: 450px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid #00000050;
+    position: absolute;
+    left: 32%;
+    top: 15%;
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.5);
+}
+.log-in{
+    width: 260px; height: 80px;
+    position: absolute;
+    left: 10px; top: 10px;
+    border-radius: 12px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 10px;
+    text-overflow: clip;
+    border-bottom: 1px solid #f97000;
+}
+.log-in_1{
+    width: 260px; height: 80px;
+    position: absolute;
+    right: 10px; top: 10px;
+    border-radius: 12px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 10px;
+    text-overflow: clip;
+    border-bottom: 1px solid #f97000;
+}
+.log-in:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+}
+.log-in_1:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+}
+.log-on_1{
+    position: absolute;
+    bottom: 5px; right: 25px;
+}
+.log-on_2{
+    position: absolute;
+    bottom: 5px; right: 100px;
+}
+.log-on_3{
+    position: absolute;
+    bottom: 5px; right: 175px;
+}
+.log-on_1 a,.log-on_2 a,.log-on_3 a{
+    text-decoration: none;
+    color: black;
+}
+.form-chart{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px 0;
+}
+.form-chart input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.form-chart input:focus{
+    outline: none;
+    border-color: #f97000;
+    box-shadow: 0 0 0 3px rgba(249, 112, 0, 0.1);
+}
+.form-chart button{
+    width: 100%;
+    height: 50px;
+    background-color: #f97000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.form-chart button:hover{
+    background-color: #e06000;
+}
+.remember {
+    display: flex;
+    align-items: left;
+    width: auto; 
+    margin: 0 0;
+    font-size: 14px; 
+}
+#remember{
+    width: 15px;
+    height: 15px;
+}
+.other{
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    color: green;
+}
+.other:hover{
+    cursor: pointer;
+    box-shadow: 0 8px 8px 0 0.5;
+    transform: scale(2);
+}
+@media (max-width: 600px) {
+    .box-main {
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .log-in, .log-in_1 {
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
