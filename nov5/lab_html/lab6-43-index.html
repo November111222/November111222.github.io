@@ -23,12 +23,14 @@
     }
 </style>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="navigation">
+            <div class="logo"><img src="../images/lab6_img/zvB3hW0uxi_small.jpg" alt="" width="35px" height="35px"></div>
             <h1>数字图书展销平台</h1>
             <div class="sousuo"><form action=""><input type="text"><button><img src="../images/lab6_img/sou.png" alt="" width="22px" height="20px"></button></form></div>
             <div class="main-nav">
-            <nav>
+            <nav></nav>
                 <ul type="none">
                     <li><a href="#">首页</a></li>
                     <li class="hidden1"><a href="#">分类</a>
@@ -42,12 +44,12 @@
                         </div>
                     </li>
                     <li><a href="#">购物车</a></li>
-                    <div class="log-in">
-                    <li><a href="lab5_1.html">登录</a>
+                    <div class="log-in1">
+                    <li><a class="login-btn">登录</a>
                     </div>
                     <span>/</span>
                     <div class="log-on">
-                        <a href="lab5_1.html">注册</a></li>
+                        <a class="register-btn">注册</a></li>
                     </div>
                 </ul>
             </nav>
@@ -195,8 +197,7 @@
                 <p>简介：魔幻现实主义的经典之作，讲述了布恩迪亚家族的兴衰史。</p>
             </div>
         </div>
-    </main>
-    <div id="cartModal" class="modal">
+        <div id="cartModal" class="modal">
             <div class="modal-content">
                 <h3>加入购物车成功！</h3>
                 <p id="bookName">图书已成功加入购物车</p>
@@ -206,26 +207,122 @@
     <div class="footer">
             <span>© 2025 数字展销平台. All rights reserved.</span>
     </div>
-        <script>
-            const modal = document.getElementById("cartModal");
-            const bookNameElement = document.getElementById("bookName");
-            const addToCartButtons = document.querySelectorAll('.buy-button a');
-            addToCartButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const bookName = this.getAttribute('data-book');
-                    bookNameElement.textContent = ` 已成功加入购物车`;
-                    modal.style.display = 'flex';
-                });
-            });
-            function closeModal() {
-                modal.style.display = 'none';
-            }
-            window.addEventListener('click', function(event) {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
-        </script>
+    
+     <div class="box-main">
+        <div class="log-in">
+            <p><span>账号登录</span></p>
+        </div>
+        <div class="log-on_1">
+            <p><span><a href="#">立即注册</a></span></p>
+        </div>
+        <div class="log-on_2">
+            
+        </div>
+        <div class="log-on_3">
+            <p><span><a href="#">忘记密码</a></span></p>
+        </div>
+        <div class="form-chart">
+            <form action="">
+                <span>账号：</span><input type="text" placeholder="请输入账号">
+            </form>
+            <form action="">
+                <span>密码：</span><input type="password" placeholder="请输入密码">
+            </form>
+        <div class="remember">
+            <input type="checkbox" id="remember">
+                <label for="remember">记住密码</label>
+        </div>         
+        <div class="log">
+                <button>立即登录</button>
+            </div>
+        </div>
+        <div class="other">
+            <span class="iconfont icon-weixin"></span>
+        </div>
+        <div class="back">
+            <span><a href="" class="close-btn">X</a></span>
+        </div>
+    </div>
+    </main>
+    
+  <script>
+       const modal = document.getElementById("cartModal");
+const bookNameElement = document.getElementById("bookName");
+const addToCartButtons = document.querySelectorAll('.buy-button a');
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parentContent = this.closest('div[class^="hidden-content"]');
+        const bookName = parentContent ? parentContent.querySelector('h3').textContent : "选中图书";
+        bookNameElement.textContent = `"${bookName}" 已成功加入购物车`;
+        modal.style.display = 'flex';
+    });
+});
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+    // 在当前代码块内获取遮罩层元素
+    const overlay = document.querySelector('.overlay'); 
+    // 获取其他相关元素
+    const loginLinks = document.querySelectorAll('.login-btn');
+    const registerLinks = document.querySelectorAll('.register-btn, .log-on_1 a');
+    const loginModal = document.querySelector('.box-main');
+    const closeBtn = document.querySelector('.back .close-btn');
+    
+    // 2. 打开弹窗函数：显示登录框 + 显示遮罩层
+    function openModal(isRegister = false) {
+        // 显示登录弹窗
+        loginModal.style.display = 'block';
+        // 显示遮罩层
+        overlay.style.display = 'block';
+        // 禁止页面滚动
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 3. 关闭弹窗函数隐藏登录框 + 隐藏遮罩层
+    function closeModal() {
+        // 隐藏登录弹窗
+        loginModal.style.display = 'none';
+        // 隐藏遮罩层
+        overlay.style.display = 'none';
+        // 恢复页面滚动
+        document.body.style.overflow = 'auto';
+    }
+    
+    // 4. 点击登录按钮触发弹窗和遮罩层
+    loginLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal(false); 
+        });
+    });
+    
+    // 5. 点击注册按钮同样触发弹窗
+    registerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            openModal(true); 
+        });
+    });
+    
+    // 关闭弹窗和遮罩层
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            closeModal();
+        });
+    }
+    
+    // 7. 点击遮罩层空白处关闭弹窗和遮罩层
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeModal();
+        }
+    });
+});
+</script>      
 </body>
 </html>

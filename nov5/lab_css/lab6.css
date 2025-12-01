@@ -10,8 +10,16 @@
 .navigation h1{
     font-size: 30px;
     position: absolute;
-    left: 20px;
+    left: 50px;
     margin: 0;
+}
+.logo{
+    line-height: 70px;
+    position: absolute;
+    left: 10px;
+}
+.logo img{
+    border-radius: 50%;
 }
 .sousuo {
     position: absolute;
@@ -99,22 +107,22 @@
 .hidden1:hover .hidden-nav{
     display: block;
 }
-.log-in{
+.log-in1{
     display: inline-block;
     transition: transform 0.3s ease; 
 }
-.log-in:hover {
+.log-in1:hover {
     transform: translate(0, -5px) scale(1.05); 
     border-radius: 6px;
     background: linear-gradient(135deg, rgb(0, 136, 255), rgb(77, 172, 255));
 }
-.log-in a {
+.log-in1 a {
     text-decoration: none;
     color: inherit;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
-.log-in:hover a {
+.log-in1:hover a {
     color: #ff0000; 
 }
 .log-on{
@@ -713,6 +721,183 @@
 .title:hover{
     box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5) ;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+}
+.login-btn:hover.overlay{
+    display: block;
+}
+.box-main{
+    width: 600px;
+    height: 450px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid #00000050;
+    position: fixed;
+    left: 32%;
+    top: 15%;
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.5);
+    display: none;
+    z-index: 10000;
+}
+.log-in{
+    width: 100%; height: 80px;
+    position: absolute;
+    top: 10px;
+    border-radius: 12px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 10px;
+    text-overflow: clip;
+    border-bottom: 1px solid #008df9;
+}
+.log-on_1{
+    position: absolute;
+    bottom: 5px; right: 25px;
+}
+.log-on_2{
+    position: absolute;
+    bottom: 5px; right: 100px;
+}
+.log-on_3{
+    position: absolute;
+    bottom: 5px; right: 175px;
+}
+.log-on_1 a,.log-on_2 a,.log-on_3 a{
+    text-decoration: none;
+    color: black;
+}
+.form-chart{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px 0;
+}
+.form-chart input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.form-chart input:focus{
+    outline: none;
+    border-color: #00aaf9;
+    box-shadow: 0 0 0 3px rgba(249, 112, 0, 0.1);
+}
+.form-chart button{
+    width: 100%;
+    height: 50px;
+    background-color: #00aaf9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.form-chart button:hover{
+    background-color: #00aff9;
+}
+.remember {
+    display: flex;
+    align-items: left;
+    width: auto; 
+    margin: 0 0;
+    font-size: 14px; 
+}
+#remember{
+    width: 15px;
+    height: 15px;
+}
+.other{
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    color: green;
+}
+.other:hover{
+    cursor: pointer;
+    box-shadow: 0 8px 8px 0 0.5;
+    transform: scale(2);
+}
+.back {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.back:hover {
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.back .close-btn {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.back .close-btn:hover {
+    color: #ff0000;
+    background: none;
+}
+
+@media (max-width: 600px) {
+    .box-main {
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .log-in, .log-in_1 {
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .box-main {
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .log-in, .log-in_1 {
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
 }
 @media (max-width: 768px) {
     .navigation {
