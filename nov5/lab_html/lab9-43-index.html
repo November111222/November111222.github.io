@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字图书展销平台</title>
+    <link rel="stylesheet" href="../lab_css/lab9.css">
+    <link rel="stylesheet" href="../font/font_5/iconfont.css">
+</head>
+<style>
+    .iconfont {
+        display: inline-flex;
+        align-items: center;        vertical-align: middle;
+    }
+    h2 span.iconfont,
+    li span.iconfont {
+        margin-right: 8px;
+        font-size: 24px;
+    }
+    h2 span.iconfont {
+        color: #ff0000;
+    }
+</style>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="navigation">
+            <div class="logo"><img src="../images/lab6_img/zvB3hW0uxi_small.jpg" alt="" width="35px" height="35px"></div>
+            <h1>数字图书展销平台</h1>
+            <div class="sousuo"><form action=""><input type="text"><button><img src="../images/lab6_img/sou.png" alt="" width="22px" height="20px"></button></form></div>
+            <div class="main-nav">
+            <nav></nav>
+                <ul type="none">
+                    <li><a href="#">首页</a></li>
+                    <li class="hidden1"><a href="#">分类</a>
+                        <div class="hidden-nav">
+                            <ul>
+                                <li><a href="">热门图书</a></li>
+                                <li><a href="">促销图书</a></li>
+                                <li><a href="">限时特惠</a></li>
+                                <li><a href="">最近上架</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">购物车</a></li>
+                    <div class="log-in1">
+                    <li><a class="login-btn">登录</a>
+                    </div>
+                    <span>/</span>
+                    <div class="log-on">
+                        <a class="register-btn">注册</a></li>
+                    </div>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <h2><span class="iconfont icon-xingzhuangjiehe"></span>图书分类</h2>
+            <ul type="none">
+                <li><a href=""><span class="iconfont icon-books"></span>科幻小说</a></li>
+                <li><a href=""><span class="iconfont icon-wenxuemingzhu"></span>文学名著</a></li>
+                <li><a href=""><span class="iconfont icon-shehuikexue"></span>社会科学</a></li>
+                <li><a href=""><span class="iconfont icon-zirankexue"></span>自然科学</a></li>
+                <li><a href=""><span class="iconfont icon-Ejudge_julei"></span>哲学书籍</a></li>
+                <li><a href=""><span class="iconfont icon-yewuxuexi"></span>儿童读物</a></li>
+                <li><a href=""><span class="iconfont icon-duxiaoshuo"></span>网文小说</a></li>
+                <li><a href=""><span class="iconfont icon-lishidili"></span>历史地理</a></li>
+                <li><a href=""><span class="iconfont icon-books"></span>综合图书</a></li>
+                <li><a href=""><span class="iconfont icon-home_ic_second_page"></span>外文书籍</a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <div class="center-1">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="../images/lab6_img/OIP-C.webp" alt="" width="1000px" height="500px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/lab6_img/R-C (1).jpg" alt="" width="1000px" height="500px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/lab6_img/R-C (2).jpg" alt="" width="1000px" height="520px">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="carousel-indicator"></div>
+                    <div class="carousel-indicator"></div>
+                    <div class="carousel-indicator"></div>
+                </div>
+            </div>
+            <div class="center-2">
+                <h2 id="yx"><span class="iconfont icon-31rexiao"></span>热销图书</h2>
+                <hr class="line" color="blue" type="solid">
+                <div class="img2">
+                    <div class="img-flex">
+                    <img src="../images/lab5_img/di.webp" alt="" width="200px" height="270px">
+                    <div class="hidden-content1">
+                        <h3>《地球编年史》</h3>
+                        <p>作者：刘慈欣</p>
+                        <p>价格：￥68.00</p>
+                        <p>简介：探索地球的过去、现在与未来。</p>
+                        <div class="buy-button"><a href="">加入购物车</a></div>
+                    </div>
+                    </div>
+                    <div class="more">
+                        <span><a href="">查看详情</a></span>
+                    </div>
+                    </div>
+                    <div class="img2">
+                    <div class="img-flex">
+                        <img src="../images/lab5_img/gang.webp" alt="" width="200px" height="270px">
+                    <div class="hidden-content2">
+                        <h3>《钢铁之心》</h3>
+                        <p>作者：王小波</p>
+                        <p>价格：￥58.00</p>
+                        <p>简介：工业革命时代人类的史诗巨作。</p>
+                        <div class="buy-button"><a href="">加入购物车</a></div>
+                    </div>
+                    </div>
+                        <div class="more">
+                            <span><a href="">查看详情</a></span>
+                        </div>
+                    </div>
+                    <div class="img2">
+                        <div class="img-flex">
+                        <img src="../images/lab5_img/lun.webp" alt="" width="200px" height="270px">
+                    <div class="hidden-content3">
+                        <h3>《轮回之旅》</h3>
+                        <p>作者：张爱玲</p>
+                        <p>价格：￥48.00</p>
+                        <p>简介：探讨生命的意义与轮回的哲学思考。</p>
+                        <div class="buy-button"><a href="">加入购物车</a></div>
+                    </div>
+                    </div>
+                        <div class="more">
+                            <span><a href="">查看详情</a></span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div class="right">
+            <h2 id="yy"><span class="iconfont icon-xianshitehui"></span>限时特惠</h2>
+        <div class="flash-sale-countdown" id="flashSaleCountdown">
+        <div class="countdown-title">限时特惠 · 剩余时间</div>
+        <div class="countdown-numbers">
+        <div class="countdown-unit">
+            <div class="countdown-num" id="countdownHours">24</div>
+            <div class="countdown-label">时</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit">
+            <div class="countdown-num" id="countdownMinutes">00</div>
+            <div class="countdown-label">分</div>
+        </div>
+        <div class="countdown-separator">:</div>
+            <div class="countdown-unit">
+                <div class="countdown-num" id="countdownSeconds">00</div>
+                <div class="countdown-label">秒</div>
+            </div>
+        </div>
+        </div>
+            <hr class="line" color="blue" type="solid">
+            <div class="right-1">
+                <img src="../images/lab5_img/na.jpg" alt="" width="150px" height="225px">
+                <div hidden class="hidden-content4">
+                    <h3>《纳米时代》</h3>
+                    <p>作者：李开复</p>
+                    <p>价格：￥88.00</p>
+                    <div class="buy-button"><a href="">加入购物车</a></div>
+                </div>
+            </div>
+            <div class="right-2">
+                <img src="../images/lab5_img/kun.webp" alt="" width="150px" height="225px">
+                <div hidden class="hidden-content5">
+                    <h3>《昆虫记》</h3>
+                    <p>作者：法布尔</p>
+                    <p>价格：￥78.00</p>
+                    <div class="buy-button"><a href="">加入购物车</a></div>
+                </div>
+            </div>
+            <div class="right-3">
+                <img src="../images/lab5_img/shi.webp" alt="" width="150px" height="225px">
+                <div hidden class="hidden-content6">
+                    <h3>《时间简史》</h3>
+                    <p>作者：斯蒂芬·霍金</p>
+                    <p>价格：￥98.00</p>
+                    <div class="buy-button"><a href="">加入购物车</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="shop"><span class="iconfont icon-gouwuchekong"></span>
+        <div class="shop-1">
+            <span>1</span>
+        </div>
+        </div>
+        <div class="top"><a href="#"><span class="iconfont icon-fanhuidingbu"></span></a></div>
+        <div class="left-2">
+            <div class="title"><strong id="new">New!   </strong><span>新书上市</span></span></div>
+            <div class="content1"><span>《未来简史》</span>
+                <p>作者：尤瓦尔·赫拉利</p>
+                <p>价格：￥68.00</p>
+                <p>简介：对人类未来的深刻洞察与思考。</p>
+            </div>
+            <div class="content1"><span>《人类简史》</span>
+                <p>作者：尤瓦尔·赫拉利</p>
+                <p>价格：￥58.00</p>
+                <p>简介：人类历史的全景式回顾与思考。</p>
+            </div>
+            <div class="content1"><span>《百年孤独》</span>
+                <p>作者：加西亚·马尔克斯</p>
+                <p>价格：￥78.00</p>
+                <p>简介：魔幻现实主义的经典之作，讲述了布恩迪亚家族的兴衰史。</p>
+            </div>
+        </div>
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <h3>加入购物车成功！</h3>
+                <p id="bookName">图书已成功加入购物车</p>
+                <button class="close-btn" onclick="closeModal()">确定</button>
+            </div>
+    </div>
+    <div class="footer">
+        <div class="mark"><img src="../images/lab7_img/vx.webp" alt=""></div>
+        <div class="mark"><img src="../images/lab7_img/qq.webp" alt=""></div>
+        <span>© 2025 数字展销平台. All rights reserved.</span>
+    </div>
+     <div class="ring-container">
+        <h2>热门图书环形展示</h2>
+        <div class="ring-scene">
+            <div class="ring">
+                <div class="ring-book"><img src="../images/lab7_img/aoman.webp" alt=""></div>
+                <div class="ring-book"><img src="../images/lab7_img/great.webp" alt=""></div>
+                <div class="ring-book"><img src="../images/lab7_img/gudu.webp" alt=""></div>
+                <div class="ring-book"><img src="../images/lab7_img/honglou.webp" alt=""></div>
+                <div class="ring-book"><img src="../images/lab7_img/war.jpg" alt=""></div>
+                <div class="ring-book"><img src="../images/lab7_img/world.webp" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="product-container">
+        <h2 class="container-title">低价特卖！！！</h2>
+        <button class="refresh-btn" id="refreshBtn">点击刷新商品</button>
+        <div class="product-list" id="productList">
+            <!-- 商品图片会通过JS动态生成 -->
+        </div>
+    </div>
+    <div>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <div class="main-comment">
+        <div class="comment-header"><span>用户评论区</span></div>
+        <hr class="line" color="blue" type="solid">
+        <div class="more0"><a href="#">展开></a></div>
+        <div class="comment-box">
+            <div class="submit"><img src="../images/lab7_img/tou0.jpg" alt=""><form action=""><input type="text" placeholder="这里是评论区，不是无人区:-)"></form>
+                <div class="pose"><button>发表</button></div>
+            </div>
+            <div class="comment">
+                <div class="user">
+                    <span><img src="../images/lab7_img/tou2.jpg" alt=""><span class="username">基泥胎煤：</span></span>
+                    <p>《百年孤独》以魔幻现实主义笔触，铺展布恩迪亚家族七代人的兴衰。奇幻与现实交织，飞毯、美人儿升天的瑰丽想象，包裹着人性深处的孤独本质。每个人都在宿命的循环中挣扎，却终逃不过孤独的枷锁。马尔克斯用史诗般的叙事，道尽家族与拉美大陆的沧桑，于荒诞中见真实，在孤独中照见人类共同的精神困境，堪称文学史上的不朽丰碑。</p>
+                    <span class="time0">2025-12-14 16:58</span>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="user">
+                    <span><img src="../images/lab7_img/tou1.jpg" alt=""><span class="username">重名概率为0的名：</span></span>
+                    <p>这家图书展销网站太赞了！书籍种类超全，正版有保障，价格还实惠。物流发货快，包装严实无破损，客服响应及时又耐心。购书体验超棒，已推荐给身边爱读书的朋友～</p>
+                    <span class="time0">2025-12-15 10:22</span>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="box-main">
+        <div class="log-in">
+            <p><span>账号注册</span></p>
+        </div>
+        <div class="log-on_1">
+            <p><span><a href="#">邮箱注册</a></span></p>
+        </div>
+        <div class="log-on_2">
+            
+        </div>
+        <div class="log-on_3">
+            <p><span><a href="#">忘记密码</a></span></p>
+        </div>
+        <div class="form-chart">
+            <form action="">
+                <span>账号：</span><input type="text" placeholder="请输入账号">
+            </form>
+            <form action="">
+                <span>密码：</span><input type="password" placeholder="请输入密码">
+            </form>
+            <div class="pwd-strength-group" id="pwdStrengthGroup">
+                <span class="pwd-strength-text" id="pwdStrengthText">密码强度：未输入</span>
+            <div class="pwd-strength-bars">
+                <div class="pwd-strength-bar" id="bar1"></div>
+                <div class="pwd-strength-bar" id="bar2"></div>
+                <div class="pwd-strength-bar" id="bar3"></div>
+                <div class="pwd-strength-bar" id="bar4"></div>
+            </div>
+            </div>
+        <div class="remember">
+            <input type="checkbox" id="remember">
+                <label for="remember">记住密码</label>
+        </div>         
+        <div class="log">
+                <button>立即注册</button>
+            </div>
+        </div>
+        <div class="other">
+            <span class="iconfont icon-weixin"></span>
+        </div>
+        <div class="back">
+            <span><a href="" class="close-btn">X</a></span>
+        </div>
+    </div>
+    </main>
+  <script>
+       const modal = document.getElementById("cartModal");
+const bookNameElement = document.getElementById("bookName");
+const addToCartButtons = document.querySelectorAll('.buy-button a');
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parentContent = this.closest('div[class^="hidden-content"]');
+        const bookName = parentContent ? parentContent.querySelector('h3').textContent : "选中图书";
+        bookNameElement.textContent = `"${bookName}" 已成功加入购物车`;
+        modal.style.display = 'flex';
+    });
+});
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+    // 在当前代码块内获取遮罩层元素
+    const overlay = document.querySelector('.overlay'); 
+    // 获取其他相关元素
+    const loginLinks = document.querySelectorAll('.login-btn');
+    const registerLinks = document.querySelectorAll('.register-btn, .log-on_1 a');
+    const loginModal = document.querySelector('.box-main');
+    const closeBtn = document.querySelector('.back .close-btn');
+    
+    // 2. 打开弹窗函数：显示登录框 + 显示遮罩层
+    function openModal(isRegister = false) {
+        // 显示登录弹窗
+        loginModal.style.display = 'block';
+        // 显示遮罩层
+        overlay.style.display = 'block';
+        // 禁止页面滚动
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 3. 关闭弹窗函数隐藏登录框 + 隐藏遮罩层
+    function closeModal() {
+        // 隐藏登录弹窗
+        loginModal.style.display = 'none';
+        // 隐藏遮罩层
+        overlay.style.display = 'none';
+        // 恢复页面滚动
+        document.body.style.overflow = 'auto';
+    }
+    
+    // 4. 点击登录按钮触发弹窗和遮罩层
+    loginLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal(false); 
+        });
+    });
+    
+    // 5. 点击注册按钮同样触发弹窗
+    registerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            openModal(true); 
+        });
+    });
+    
+    // 关闭弹窗和遮罩层
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            closeModal();
+        });
+    }
+    
+    // 7. 点击遮罩层空白处关闭弹窗和遮罩层
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeModal();
+        }
+    });
+});
+
+
+ // 1. 扩展商品数据源：增加价格、描述、销量等详情信息
+        const productImages = [
+            { 
+                src: "../images/lab5_img/di.webp", 
+                name: "我与地坛",
+                price: "¥68.00",
+                desc: "",
+                sales: "月销 1.2万+"
+            },
+            { 
+                src: "../images/lab5_img/gang.webp", 
+                name: "书",
+                price: "¥199.00",
+                desc: "",
+                sales: "月销 8600+"
+            },
+            { 
+                src: "../images/lab5_img/lun.webp", 
+                name: "书",
+                price: "¥159.00",
+                desc: "",
+                sales: "月销 5300+"
+            },
+            { 
+                src: "../images/lab5_img/na.jpg", 
+                name: "书",
+                price: "¥299.00",
+                desc: "",
+                sales: "月销 2.1万+"
+            },
+            { 
+                src: "../images/lab5_img/shi.webp", 
+                name: "书",
+                price: "¥399.00",
+                desc: "",
+                sales: "月销 1.8万+"
+            },
+            { 
+                src: "../images/lab5_img/kun.webp", 
+                name: "书",
+                price: "¥89.00",
+                desc: "",
+                sales: "月销 3.5万+"
+            },
+            { 
+                src: "../images/lab5_img/xue.webp", 
+                name: "书",
+                price: "¥49.90",
+                desc: "",
+                sales: "月销 9800+"
+            },
+            { 
+                src: "../images/lab5_img/gang.webp", 
+                name: "书",
+                price: "¥129.00",
+                desc: "",
+                sales: "月销 7500+"
+            },
+            { 
+                src: "../images/lab7_img/honglou.webp", 
+                name: "书",
+                price: "¥119.00",
+                desc: "",
+                sales: "月销 4.2万+"
+            },
+            { 
+                src: "https://picsum.photos/seed/product10/400/400", 
+                name: "书",
+                price: "¥29.90",
+                desc: "",
+                sales: "月销 5.6万+"
+            }
+        ];
+
+        // 2. 获取DOM元素
+        const refreshBtn = document.getElementById("refreshBtn");
+        const productList = document.getElementById("productList");
+
+        // 3. 随机生成2个不同的商品索引
+        function getRandomIndexes() {
+            const indexes = [];
+            while (indexes.length < 2) {
+                const randomIndex = Math.floor(Math.random() * productImages.length);
+                if (!indexes.includes(randomIndex)) {
+                    indexes.push(randomIndex);
+                }
+            }
+            return indexes;
+        }
+
+        // 4. 渲染商品图片（详情层）
+        function renderProducts() {
+            productList.innerHTML = "";
+            const randomIndexes = getRandomIndexes();
+            
+            randomIndexes.forEach(index => {
+                const product = productImages[index];
+                const productItem = document.createElement("div");
+                productItem.className = "product-item";
+                // 详情层HTML结构
+                productItem.innerHTML = `
+                    <img src="${product.src}" alt="${product.name}" class="product-img">
+                    <p class="product-name">${product.name}</p>
+                    <!-- 商品详情层 -->
+                    <div class="product-detail">
+                        <p class="detail-price">${product.price}</p>
+                        <p class="detail-desc">${product.desc}</p>
+                        <p class="detail-sales">${product.sales}</p>
+                    </div>
+                `;
+                productList.appendChild(productItem);
+            });
+        }
+
+        // 5. 绑定刷新按钮点击事件
+        refreshBtn.addEventListener("click", renderProducts);
+
+        // 6. 页面加载时默认渲染一次商品
+        window.addEventListener("load", renderProducts);
+
+    (function() {
+  // 1. 获取DOM元素（仅新增元素，不操作原有核心元素）
+  const pwdInput = document.querySelector('input[type="password"]'); // 匹配原有密码输入框
+  const pwdStrengthText = document.getElementById('pwdStrengthText');
+  const pwdStrengthBars = [
+    document.getElementById('bar1'),
+    document.getElementById('bar2'),
+    document.getElementById('bar3'),
+    document.getElementById('bar4')
+  ];
+  const pwdStrengthGroup = document.getElementById('pwdStrengthGroup');
+
+  // 初始化：若密码框存在则显示强度模块，否则隐藏（防止报错）
+  if (!pwdInput) {
+    pwdStrengthGroup.style.display = 'none';
+    return;
+  }
+
+  // 2. 密码强度判定核心函数（返回：等级 + 提示文本）
+  // 判定规则：兼顾易用性与安全性，4个等级清晰区分
+  function judgePwdStrength(password) {
+    let strengthLevel = 0; // 0:未输入 1:弱 2:中 3:强
+    let strengthText = '密码强度：未输入';
+
+    // 规则1：密码长度判定
+    if (password.length === 0) {
+      return { level: 0, text: strengthText };
+    }
+    if (password.length >= 6) strengthLevel++;
+    if (password.length >= 10) strengthLevel++;
+
+    // 规则2：包含数字（0-9）
+    if (/[0-9]/.test(password)) strengthLevel++;
+
+    // 规则3：包含大小写字母（a-z/A-Z）
+    if (/[a-zA-Z]/.test(password)) strengthLevel++;
+
+    // 规则4：包含特殊字符（!@#$%^&*等）
+    if (/[^0-9a-zA-Z]/.test(password)) strengthLevel++;
+
+    // 修正等级（限制在1-3之间，对应弱/中/强）
+    strengthLevel = Math.min(strengthLevel, 3);
+    strengthLevel = Math.max(strengthLevel, 1);
+
+    // 匹配对应等级的提示文本
+    switch (strengthLevel) {
+      case 1:
+        strengthText = '密码强度：弱（建议增加长度或添加特殊字符）';
+        break;
+      case 2:
+        strengthText = '密码强度：中（建议添加大小写字母或特殊字符）';
+        break;
+      case 3:
+        strengthText = '密码强度：强（密码安全，可正常使用）';
+        break;
+    }
+
+    return { level: strengthLevel, text: strengthText };
+  }
+
+  // 3. 更新密码强度展示（文本 + 进度条）
+  function updatePwdStrengthDisplay(password) {
+    const { level, text } = judgePwdStrength(password);
+
+    // 步骤1：更新提示文本
+    pwdStrengthText.textContent = text;
+    pwdStrengthText.style.color = level === 1 ? '#ff4d4f' : (level === 2 ? '#faad14' : '#52c41a');
+
+    // 步骤2：重置所有强度条样式
+    pwdStrengthBars.forEach(bar => {
+      bar.classList.remove('weak', 'medium', 'strong');
+    });
+
+    // 步骤3：根据等级为对应强度条添加样式
+    for (let i = 0; i < level; i++) {
+      if (level === 1) {
+        pwdStrengthBars[i].classList.add('weak');
+      } else if (level === 2) {
+        pwdStrengthBars[i].classList.add('medium');
+      } else if (level >= 3) {
+        pwdStrengthBars[i].classList.add('strong');
+      }
+    }
+  }
+
+  // 4. 绑定密码框输入事件（实时监听，输入即更新）
+  pwdInput.addEventListener('input', function(e) {
+    const password = e.target.value.trim();
+    updatePwdStrengthDisplay(password);
+  });
+
+  // 5. 初始化展示（页面加载完成后，密码框为空时的默认状态）
+  window.addEventListener('load', function() {
+    updatePwdStrengthDisplay('');
+  });
+})();
+
+(function() {
+  // 1. 获取DOM元素（仅新增倒计时元素，不操作原有商品元素）
+  const countdownHours = document.getElementById('countdownHours');
+  const countdownMinutes = document.getElementById('countdownMinutes');
+  const countdownSeconds = document.getElementById('countdownSeconds');
+  const flashSaleCountdown = document.getElementById('flashSaleCountdown');
+
+  // 初始化：若倒计时容器不存在则直接返回，防止报错
+  if (!countdownHours || !countdownMinutes || !countdownSeconds) {
+    if (flashSaleCountdown) flashSaleCountdown.style.display = 'none';
+    return;
+  }
+
+  // 2. 核心变量：倒计时总秒数（24小时 = 24*60*60 = 86400秒）
+  let totalSeconds = 24 * 60 * 60;
+  // 存储定时器ID，防止多个定时器叠加
+  let countdownTimer = null;
+
+  // 3. 格式化数字：补零（单个数字前加0，如 5 → 05）
+  function formatNumber(num) {
+    return num.toString().padStart(2, '0');
+  }
+
+  // 4. 更新倒计时页面展示
+  function updateCountdownDisplay() {
+    // 计算剩余时、分、秒
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    // 更新DOM元素，格式化显示
+    countdownHours.textContent = formatNumber(hours);
+    countdownMinutes.textContent = formatNumber(minutes);
+    countdownSeconds.textContent = formatNumber(seconds);
+  }
+
+  // 5. 倒计时核心逻辑
+  function startCountdown() {
+    // 先清除原有定时器，防止叠加冲突
+    if (countdownTimer) clearInterval(countdownTimer);
+
+    // 初始化首次展示
+    updateCountdownDisplay();
+
+    // 开启秒级定时器，每秒更新一次
+    countdownTimer = setInterval(() => {
+      // 总秒数减1
+      totalSeconds--;
+
+      // 当倒计时结束（总秒数≤0），重置为24小时，实现循环倒计时
+      if (totalSeconds <= 0) {
+        totalSeconds = 24 * 60 * 60;
+      }
+
+      // 更新页面展示
+      updateCountdownDisplay();
+    }, 1000);
+  }
+
+  // 6. 页面加载完成后启动倒计时
+  window.addEventListener('load', startCountdown);
+
+  // 7. 兼容限时特惠商品刷新功能：刷新商品时不重置倒计时（保持计时连续性）
+  // 若原有商品刷新有专属事件，可在此添加兼容，确保倒计时不受影响
+  // （当前已独立封装，原有刷新功能不会干扰倒计时定时器）
+
+  // 8. 页面卸载时清除定时器，避免内存泄漏
+  window.addEventListener('beforeunload', () => {
+    if (countdownTimer) clearInterval(countdownTimer);
+  });
+})();
+
+</script>      
+</body>
+</html>
