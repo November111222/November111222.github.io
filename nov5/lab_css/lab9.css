@@ -401,79 +401,6 @@
 .center-2{
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5)
 }
-.img2{
-    position: relative;
-    display: inline-block;
-    margin: 50px;
-    width: 225px;
-    height: 350px;
-    text-align: center;
-    line-height: normal;
-    background-color: rgb(228, 242, 254);
-    border: 1px solid #00000050;
-    border-radius: 8px;
-    box-shadow: 0px 8px 8px 0px #858686;
-}
-.img-flex{
-    position: relative;
-    z-index: 10;
-}
-.more{
-    position: absolute;
-    bottom: 20px; left: 50%;
-    width: 150px;
-    height: 35px;
-    line-height: 35px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    transform: translateX(-50%);
-    background-color: rgb(0, 166, 255);
-    padding: 5px 10px;
-    border-radius: 5px;
-    z-index: 1;
-}
-.more a {
-    color: #ffffff;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-}
-.more a:hover {
-    cursor: pointer;
-    color: rgb(255, 79, 79);
-}
-.img-flex:hover{
-    box-shadow: 0 4px 4px 0 rgba(91, 176, 255, 0.15);
-    transform: scale(1.1);
-}
-.hidden-content1, .hidden-content2, .hidden-content3, .hidden-content4, .hidden-content5, .hidden-content6 {
-    display: none;
-    position: absolute;
-    top:0; left: 0;
-    width: 200px;
-    background-color: rgba(157, 157, 157, 0.5);
-    color: #00bfff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 1000;
-    text-align: left;
-    font-size: 20px;
-    }
-.img-flex:hover .hidden-content1,
-.img-flex:hover .hidden-content2,
-.img-flex:hover .hidden-content3,
-.img-flex:hover .hidden-content4,
-.img-flex:hover .hidden-content5,
-.img-flex:hover .hidden-content6 {
-    display: block;
-    z-index: 1000;
-    cursor: pointer;
-}
-.img-flex:hover .more {
-    display: none;
-}
 .buy-button {
     margin-top: 10px;
     text-align: center;
@@ -1381,7 +1308,7 @@
     }
 }
 
-/* 密码强度容器样式 - 独立类名，不污染原有样式 */
+/* 密码强度容器样式 */
 .pwd-strength-group {
   margin: 8px 0 16px 0;
   display: flex;
@@ -1395,7 +1322,7 @@
   color: #666;
 }
 
-/* 强度等级条容器（横向排列4个等级） */
+/* 强度等级条容器 */
 .pwd-strength-bars {
   display: flex;
   gap: 4px;
@@ -1413,19 +1340,19 @@
 
 /* 4个强度等级对应的颜色（未激活/弱/中/强） */
 .pwd-strength-bar.weak {
-  background-color: #ff4d4f; /* 红色 - 弱 */
+  background-color: #ff4d4f; 
 }
 
 .pwd-strength-bar.medium {
-  background-color: #faad14; /* 黄色 - 中 */
+  background-color: #faad14; 
 }
 
 .pwd-strength-bar.strong {
-  background-color: #52c41a; /* 绿色 - 强 */
+  background-color: #52c41a; 
 }
 
 
-/* 限时特惠倒计时容器样式 - 独立前缀，不污染原有样式 */
+/* 限时特惠倒计时容器样式*/
 .flash-sale-countdown {
   margin: 16px 0;
   padding: 12px;
@@ -1452,7 +1379,7 @@
   font-size: 18px;
 }
 
-/* 单个时间单位（时/分/秒）样式 */
+/* 单个时间单位（时/分/秒）*/
 .countdown-unit {
   display: flex;
   flex-direction: column;
@@ -1474,13 +1401,13 @@
   font-size: 20px;
 }
 
-/* 时间单位文本（时/分/秒） */
+/* 时间单位文本（*/
 .countdown-label {
   font-size: 12px;
   color: #666666;
 }
 
-/* 分隔符（:）样式 */
+/* 分隔符样式 */
 .countdown-separator {
   color: #1c89fd;
   font-weight: bold;

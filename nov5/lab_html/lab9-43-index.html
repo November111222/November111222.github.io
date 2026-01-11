@@ -91,54 +91,7 @@
                 </div>
             </div>
             <div class="center-2">
-                <h2 id="yx"><span class="iconfont icon-31rexiao"></span>热销图书</h2>
-                <hr class="line" color="blue" type="solid">
-                <div class="img2">
-                    <div class="img-flex">
-                    <img src="../images/lab5_img/di.webp" alt="" width="200px" height="270px">
-                    <div class="hidden-content1">
-                        <h3>《地球编年史》</h3>
-                        <p>作者：刘慈欣</p>
-                        <p>价格：￥68.00</p>
-                        <p>简介：探索地球的过去、现在与未来。</p>
-                        <div class="buy-button"><a href="">加入购物车</a></div>
-                    </div>
-                    </div>
-                    <div class="more">
-                        <span><a href="">查看详情</a></span>
-                    </div>
-                    </div>
-                    <div class="img2">
-                    <div class="img-flex">
-                        <img src="../images/lab5_img/gang.webp" alt="" width="200px" height="270px">
-                    <div class="hidden-content2">
-                        <h3>《钢铁之心》</h3>
-                        <p>作者：王小波</p>
-                        <p>价格：￥58.00</p>
-                        <p>简介：工业革命时代人类的史诗巨作。</p>
-                        <div class="buy-button"><a href="">加入购物车</a></div>
-                    </div>
-                    </div>
-                        <div class="more">
-                            <span><a href="">查看详情</a></span>
-                        </div>
-                    </div>
-                    <div class="img2">
-                        <div class="img-flex">
-                        <img src="../images/lab5_img/lun.webp" alt="" width="200px" height="270px">
-                    <div class="hidden-content3">
-                        <h3>《轮回之旅》</h3>
-                        <p>作者：张爱玲</p>
-                        <p>价格：￥48.00</p>
-                        <p>简介：探讨生命的意义与轮回的哲学思考。</p>
-                        <div class="buy-button"><a href="">加入购物车</a></div>
-                    </div>
-                    </div>
-                        <div class="more">
-                            <span><a href="">查看详情</a></span>
-                        </div>
-                    </div>
-            </div>
+                <!-- 图书筛选栏和展示区将在此处通过JS动态生成 -->
         </div>
         </div>
         <div class="right">
@@ -241,7 +194,7 @@
         </div>
     </div>
     <div class="product-container">
-        <h2 class="container-title">低价特卖！！！</h2>
+        <h2 class="container-title">随机推荐</h2>
         <button class="refresh-btn" id="refreshBtn">点击刷新商品</button>
         <div class="product-list" id="productList">
             <!-- 商品图片会通过JS动态生成 -->
@@ -350,27 +303,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginModal = document.querySelector('.box-main');
     const closeBtn = document.querySelector('.back .close-btn');
     
-    // 2. 打开弹窗函数：显示登录框 + 显示遮罩层
+    // 显示登录框 + 显示遮罩层
     function openModal(isRegister = false) {
-        // 显示登录弹窗
         loginModal.style.display = 'block';
-        // 显示遮罩层
         overlay.style.display = 'block';
-        // 禁止页面滚动
         document.body.style.overflow = 'hidden';
     }
 
-    // 3. 关闭弹窗函数隐藏登录框 + 隐藏遮罩层
+    // 关闭弹窗函数隐藏登录框 + 隐藏遮罩层
     function closeModal() {
-        // 隐藏登录弹窗
         loginModal.style.display = 'none';
-        // 隐藏遮罩层
         overlay.style.display = 'none';
-        // 恢复页面滚动
         document.body.style.overflow = 'auto';
     }
     
-    // 4. 点击登录按钮触发弹窗和遮罩层
+    // 点击登录按钮触发弹窗和遮罩层
     loginLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -378,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 5. 点击注册按钮同样触发弹窗
+    // 点击注册按钮同样触发弹窗
     registerLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault(); 
@@ -394,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 7. 点击遮罩层空白处关闭弹窗和遮罩层
+    // 点击遮罩层空白处关闭弹窗和遮罩层
     overlay.addEventListener('click', function(e) {
         if (e.target === overlay) {
             closeModal();
@@ -403,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
- // 1. 扩展商品数据源：增加价格、描述、销量等详情信息
+ //  扩展商品数据
         const productImages = [
             { 
                 src: "../images/lab5_img/di.webp", 
@@ -477,11 +424,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ];
 
-        // 2. 获取DOM元素
         const refreshBtn = document.getElementById("refreshBtn");
         const productList = document.getElementById("productList");
 
-        // 3. 随机生成2个不同的商品索引
+        // 随机生成2个不同的商品索引
         function getRandomIndexes() {
             const indexes = [];
             while (indexes.length < 2) {
@@ -493,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return indexes;
         }
 
-        // 4. 渲染商品图片（详情层）
+        // 渲染商品图片
         function renderProducts() {
             productList.innerHTML = "";
             const randomIndexes = getRandomIndexes();
@@ -502,7 +448,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const product = productImages[index];
                 const productItem = document.createElement("div");
                 productItem.className = "product-item";
-                // 详情层HTML结构
+                
                 productItem.innerHTML = `
                     <img src="${product.src}" alt="${product.name}" class="product-img">
                     <p class="product-name">${product.name}</p>
@@ -517,15 +463,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // 5. 绑定刷新按钮点击事件
+        //  绑定刷新按钮点击事件
         refreshBtn.addEventListener("click", renderProducts);
 
-        // 6. 页面加载时默认渲染一次商品
+        // 页面加载时默认渲染一次商品
         window.addEventListener("load", renderProducts);
 
+
     (function() {
-  // 1. 获取DOM元素（仅新增元素，不操作原有核心元素）
-  const pwdInput = document.querySelector('input[type="password"]'); // 匹配原有密码输入框
+  const pwdInput = document.querySelector('input[type="password"]'); 
   const pwdStrengthText = document.getElementById('pwdStrengthText');
   const pwdStrengthBars = [
     document.getElementById('bar1'),
@@ -535,36 +481,30 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
   const pwdStrengthGroup = document.getElementById('pwdStrengthGroup');
 
-  // 初始化：若密码框存在则显示强度模块，否则隐藏（防止报错）
+  // 若密码框存在则显示强度模块，否则隐藏
   if (!pwdInput) {
     pwdStrengthGroup.style.display = 'none';
     return;
   }
 
-  // 2. 密码强度判定核心函数（返回：等级 + 提示文本）
-  // 判定规则：兼顾易用性与安全性，4个等级清晰区分
   function judgePwdStrength(password) {
     let strengthLevel = 0; // 0:未输入 1:弱 2:中 3:强
     let strengthText = '密码强度：未输入';
 
-    // 规则1：密码长度判定
+    // 密码长度判定
     if (password.length === 0) {
       return { level: 0, text: strengthText };
     }
     if (password.length >= 6) strengthLevel++;
     if (password.length >= 10) strengthLevel++;
 
-    // 规则2：包含数字（0-9）
     if (/[0-9]/.test(password)) strengthLevel++;
 
-    // 规则3：包含大小写字母（a-z/A-Z）
     if (/[a-zA-Z]/.test(password)) strengthLevel++;
 
-    // 规则4：包含特殊字符（!@#$%^&*等）
-    if (/[^0-9a-zA-Z]/.test(password)) strengthLevel++;
+    if (/[^0-9a-zA-Z]/.test(password)) strengthLevel += 2;
 
-    // 修正等级（限制在1-3之间，对应弱/中/强）
-    strengthLevel = Math.min(strengthLevel, 3);
+    strengthLevel = Math.min(strengthLevel, 4);
     strengthLevel = Math.max(strengthLevel, 1);
 
     // 匹配对应等级的提示文本
@@ -578,25 +518,25 @@ document.addEventListener('DOMContentLoaded', function() {
       case 3:
         strengthText = '密码强度：强（密码安全，可正常使用）';
         break;
+    case 4:
+        strengthText = '密码强度：极强（非常安全的密码）';
+        break;
     }
 
     return { level: strengthLevel, text: strengthText };
   }
 
-  // 3. 更新密码强度展示（文本 + 进度条）
   function updatePwdStrengthDisplay(password) {
     const { level, text } = judgePwdStrength(password);
 
-    // 步骤1：更新提示文本
     pwdStrengthText.textContent = text;
     pwdStrengthText.style.color = level === 1 ? '#ff4d4f' : (level === 2 ? '#faad14' : '#52c41a');
 
-    // 步骤2：重置所有强度条样式
     pwdStrengthBars.forEach(bar => {
       bar.classList.remove('weak', 'medium', 'strong');
     });
 
-    // 步骤3：根据等级为对应强度条添加样式
+    // 根据等级为对应强度条添加样式
     for (let i = 0; i < level; i++) {
       if (level === 1) {
         pwdStrengthBars[i].classList.add('weak');
@@ -608,20 +548,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // 4. 绑定密码框输入事件（实时监听，输入即更新）
+  // 绑定密码框输入事件
   pwdInput.addEventListener('input', function(e) {
     const password = e.target.value.trim();
     updatePwdStrengthDisplay(password);
   });
 
-  // 5. 初始化展示（页面加载完成后，密码框为空时的默认状态）
   window.addEventListener('load', function() {
     updatePwdStrengthDisplay('');
   });
 })();
 
+
 (function() {
-  // 1. 获取DOM元素（仅新增倒计时元素，不操作原有商品元素）
+  // 获取DOM元素（仅新增倒计时元素，不操作原有商品元素）
   const countdownHours = document.getElementById('countdownHours');
   const countdownMinutes = document.getElementById('countdownMinutes');
   const countdownSeconds = document.getElementById('countdownSeconds');
@@ -633,19 +573,19 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
-  // 2. 核心变量：倒计时总秒数（24小时 = 24*60*60 = 86400秒）
+  // 核心变量：倒计时总秒数
   let totalSeconds = 24 * 60 * 60;
   // 存储定时器ID，防止多个定时器叠加
   let countdownTimer = null;
 
-  // 3. 格式化数字：补零（单个数字前加0，如 5 → 05）
+  // 格式化数字：补零
   function formatNumber(num) {
     return num.toString().padStart(2, '0');
   }
 
-  // 4. 更新倒计时页面展示
+  //更新倒计时页面展示
   function updateCountdownDisplay() {
-    // 计算剩余时、分、秒
+    // 计算剩余时分秒
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
@@ -656,7 +596,7 @@ document.addEventListener('DOMContentLoaded', function() {
     countdownSeconds.textContent = formatNumber(seconds);
   }
 
-  // 5. 倒计时核心逻辑
+  // 倒计时核心逻辑
   function startCountdown() {
     // 先清除原有定时器，防止叠加冲突
     if (countdownTimer) clearInterval(countdownTimer);
@@ -665,11 +605,8 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCountdownDisplay();
 
     // 开启秒级定时器，每秒更新一次
-    countdownTimer = setInterval(() => {
-      // 总秒数减1
-      totalSeconds--;
-
-      // 当倒计时结束（总秒数≤0），重置为24小时，实现循环倒计时
+        countdownTimer = setInterval(() => {
+      totalSeconds--;      // 当倒计时结束重置为24小时实现循环倒计时
       if (totalSeconds <= 0) {
         totalSeconds = 24 * 60 * 60;
       }
@@ -679,19 +616,100 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
   }
 
-  // 6. 页面加载完成后启动倒计时
+  //  页面加载完成后启动倒计时
   window.addEventListener('load', startCountdown);
 
-  // 7. 兼容限时特惠商品刷新功能：刷新商品时不重置倒计时（保持计时连续性）
-  // 若原有商品刷新有专属事件，可在此添加兼容，确保倒计时不受影响
-  // （当前已独立封装，原有刷新功能不会干扰倒计时定时器）
-
-  // 8. 页面卸载时清除定时器，避免内存泄漏
+    // 页面卸载前清除定时器，防止内存泄漏
   window.addEventListener('beforeunload', () => {
     if (countdownTimer) clearInterval(countdownTimer);
   });
 })();
 
+
+// 页面加载完成后执行
+window.onload = function() {
+  let center2 = document.querySelector('.center-2');
+  if (!center2) {
+    center2 = document.createElement('div');
+    center2.className = 'center-2';
+    document.body.appendChild(center2);
+  }
+
+  //定义简单的图书数据
+  const books = [
+    { name: "我与地坛", type: "科幻", price: 98, img:"../images/lab5_img/di.webp" },
+    { name: "呐喊", type: "文学", price: 28, img:"../images/lab5_img/na.jpg" },
+    { name: "钢铁是怎样炼成的", type: "社科", price: 68, img:"../images/lab5_img/gang.webp" },
+    { name: "昆虫记", type: "悬疑", price: 59, img:"../images/lab5_img/kun.webp" },
+    { name: "论语", type: "经管", price: 128, img:"../images/lab5_img/lun.webp" }
+  ];
+
+  //创建筛选栏
+  const filterDiv = document.createElement('div');
+  filterDiv.style = "margin:10px 0; padding:10px; background:#f5f5f5; border-radius:5px;";
+  filterDiv.innerHTML = `
+    分类：<select id="typeFilter" style="padding:5px; margin:0 10px;">
+      <option value="all">全部</option>
+      <option value="科幻">科幻</option>
+      <option value="文学">文学</option>
+      <option value="社科">社科</option>
+      <option value="悬疑">悬疑</option>
+      <option value="编程">编程</option>
+      <option value="经管">经管</option>
+    </select>
+    价格：<select id="priceFilter" style="padding:5px; margin:0 10px;">
+      <option value="all">全部</option>
+      <option value="0-50">0-50元</option>
+      <option value="50-100">50-100元</option>
+      <option value="100+">100元以上</option>
+    </select>
+    <button onclick="filterBook()" style="padding:5px 15px; cursor:pointer;">筛选</button>
+  `;
+
+  //创建图书展示区
+  const bookDiv = document.createElement('div');
+  bookDiv.id = "bookShow";
+  bookDiv.style = "display:flex; flex-wrap:wrap; gap:15px; padding:10px;";
+
+  center2.insertBefore(filterDiv, center2.firstChild);
+  center2.insertBefore(bookDiv, filterDiv.nextSibling);
+
+  // 初始加载所有图书
+  renderBooks(books);
+
+  // 筛选函数
+  window.filterBook = function() {
+    const type = document.getElementById('typeFilter').value;
+    const price = document.getElementById('priceFilter').value;
+    
+    let result = books;
+    // 分类筛选
+    if (type !== 'all') result = result.filter(b => b.type === type);
+    // 价格筛选
+    if (price === '0-50') result = result.filter(b => b.price <= 50);
+    if (price === '50-100') result = result.filter(b => b.price >50 && b.price <=100);
+    if (price === '100+') result = result.filter(b => b.price >100);
+    
+    renderBooks(result);
+  }
+
+  // 渲染图书
+  function renderBooks(data) {
+    const showDiv = document.getElementById('bookShow');
+    showDiv.innerHTML = '';
+    data.forEach(book => {
+      const card = document.createElement('div');
+      card.style = "width:150px; border:1px solid #eee; padding:10px; border-radius:5px; text-align:center;";
+      card.innerHTML = `
+        <img src="${book.img}" style="width:140px; height:200px;"/>
+        <p>${book.name}</p>
+        <p>¥${book.price}</p>
+        <p>${book.type}</p>
+      `;
+      showDiv.appendChild(card);
+    });
+  }
+};
 </script>      
 </body>
 </html>
