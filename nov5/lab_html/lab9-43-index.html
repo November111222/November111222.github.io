@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 开启秒级定时器，每秒更新一次
         countdownTimer = setInterval(() => {
-      totalSeconds--;      // 当倒计时结束重置为24小时实现循环倒计时
+      totalSeconds--;     
       if (totalSeconds <= 0) {
         totalSeconds = 24 * 60 * 60;
       }
